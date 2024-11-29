@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TailwindCSS - PCcomponentes Formulario </title>
+  <!-- tailwindcss
+      FORMULARIO PC COMPONENTES
+  -->
+  <link rel="stylesheet" href="output.css">
+</head>
+
+<!-- npm run dev -->
+
+<body class="bg-gray-100 font-sans">
+
+  <!-- Encabezado -->
+  <header class="sticky w-full bg-white shadow-lg z-10">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <a href="#" class="text-2xl font-bold text-orange-600">PC Componentes</a>
+      <!-- Menú principal -->
+      <nav class="hidden lg:flex space-x-6">
+        <a href="#about" class="text-gray-700 hover:text-orange-500">Sobre Nosotros</a>
+        <a href="#service" class="text-gray-700 hover:text-orange-500">Servicios</a>
+        <a href="#contact" class="text-gray-700 hover:text-orange-500">Contacto</a>
+      </nav>
+      <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none">
+        <svg xmlns=" http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Cuerpo encabezado -->
+  <main class="container mx-auto flex items-center justify-center mt-11 flex-col">
+    
+    <div class="bg-white rounded-lg shadow-lg p-10 grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
+      <!-- Formulario -->
+      <div>
+        <form action="">
+          <!-- Nombre y Apellidos -->
+          <div class="mb-4 items-center border-b border-orange-600 py-2">
+            <label for="nombre" class="block text-[1rem] text-gray-700 font-semibold">Nombre y Apellidos</label>
+            <input type="text" id="nombre" name="nombre" placeholder="NOMBRE Y APELLIDOS"
+              class="mt-1 appearance-none bg-transparent border-none w-full text-orange-600 mr-3 py-1 px-2 leading-tight focus:outline-none">
+          </div>
+         <!-- Dirección -->
+          <div class="mb-4 items-center border-b border-orange-600 py-2">
+            <label for="nombre" class="block text-[1rem] text-gray-700 font-semibold">Dirección</label>
+            <input type="text" id="nombre" name="nombre" placeholder="DIRECCIÓN"
+              class="mt-1 appearance-none bg-transparent border-none w-full text-orange-600 mr-3 py-1 px-2 leading-tight focus:outline-none">
+          </div>
+         <!-- Población y Provincia -->
+          <div class="flex flex-wrap -mx-3 mb-4">       <!-- añadir mr-2 entre divs-->
+            <div class="w-full md:w-1/2 px-3 items-center border-b border-orange-600 py-2 md:mb-0">
+              <label class="block tracking-wide text-gray-700 text-[1rem] font-semibold mb-2" for="grid-first-name">
+                Población
+              </label>
+              <input type="text" id="nombre" name="nombre" placeholder="POBLACIÓN"
+              class="mt-1 appearance-none bg-transparent border-none w-full text-orange-600 mr-3 py-1 px-2 leading-tight focus:outline-none">
+            </div>
+            <div class="w-full md:w-1/2 px-3 items-center border-b border-orange-600 py-2 md:mb-0">
+              <label class="block tracking-wide text-gray-700 text-[1rem] font-semibold mb-2" for="grid-last-name">
+                Provincia
+              </label>
+              <select id="provincia" name="provincia"
+              class="w-full mt-1 px-4 py-2 text-gray-700 rounded focus:outline-none">
+                <option>Provincia 1</option>
+                <option>Provincia 2</option>
+                <option>Provincia 3</option>
+            </select>
+            </div>
+          </div>
+         <!-- Correo -->
+          <div class="mb-4 items-center border-b border-orange-600 py-2">
+            <label for="nombre" class="block text-[1rem] text-gray-700 font-semibold">Correo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="CORREO"
+              class="mt-1 appearance-none bg-transparent border-none w-full text-orange-600 mr-3 py-1 px-2 leading-tight focus:outline-none">
+          </div>
+         <!-- Usuario y Contraseña -->
+          <div class="flex flex-wrap -mx-3 mb-4">       <!-- añadir mr-2 entre divs-->
+            <div class="w-full md:w-1/2 px-3 items-center border-b border-orange-600 py-2">
+              <label class="block tracking-wide text-gray-700 text-[1rem] font-semibold mb-2" for="grid-first-name">
+                Usuario
+              </label>
+              <input type="text" id="nombre" name="nombre" placeholder="USUARIOS"
+              class="mt-1 appearance-none bg-transparent border-none w-full text-orange-600 mr-3 py-1 px-2 leading-tight focus:outline-none">
+            </div>
+            <div class="w-full md:w-1/2 px-3 items-center border-b border-orange-600 py-2">
+              <label class="block tracking-wide text-gray-700 text-[1rem] font-semibold mb-2" for="grid-last-name">
+                Contraseña
+              </label>
+              <input type="password" id="nombre" name="nombre" placeholder="*********"
+              class="mt-1 appearance-none bg-transparent border-none w-full text-orange-600 mr-3 py-1 px-2 leading-tight focus:outline-none">
+            </div>
+          </div>
+         <!-- Fecha Pedido y Fecha Entrega -->
+         <div class="flex flex-wrap -mx-3 mb-4">       <!-- añadir mr-2 entre divs-->
+          <div class="w-full md:w-1/2 px-3 items-center border-b border-orange-600 py-2">
+            <label class="block tracking-wide text-gray-700 text-[1rem] font-semibold mb-2" for="grid-first-name">
+              Fecha Pedido
+            </label>
+            <input type="date" id="nombre" name="nombre" placeholder="FECHA PEDIDO"
+            class="mt-1 appearance-none bg-transparent border-none w-full text-orange-600 mr-3 py-1 px-2 leading-tight focus:outline-none">
+          </div>
+          <div class="w-full md:w-1/2 px-3 items-center border-b border-orange-600 py-2">
+            <label class="block uppercase tracking-wide text-gray-700 text-[1rem] font-semibold mb-2" for="grid-last-name">
+              Fecha Entrega
+            </label>
+            <input type="date" id="nombre" name="nombre" placeholder="FECHA ENTREGA"
+            class="mt-1 appearance-none bg-transparent border-none w-full text-orange-600 mr-3 py-1 px-2 leading-tight focus:outline-none">
+          </div>
+        </div>
+
+        </form>
+      </div>
+      <!-- Img derecha -->
+      <div class="hidden md:flex justify-center items-center">
+        <img src="../images/lateral.svg" alt="Ilustración de entrega" class="w-full max-w-md">
+      </div>
+
+      <div class="text-end">
+        <input type="checkbox" class="text-gray-700 text-sm"> Acepto términos y condiciones</input>
+
+        <button class="text-orange-700 hover:text-white mt-4 w-full text-xl font-bold h-16 uppercase flex-shrink-0 bg-none hover:bg-orange-700 border-orange-700 hover:border-orange-700 border-2 py-1 px-2 rounded" type="button">
+          Enviar...
+        </button>
+      </div>
+    </div>
+
+
+  </main>
+
+  <!-- <script src="./js/script.js"></script> -->
+
+</body>
+
+</html>
