@@ -5,9 +5,9 @@ module.exports = {
     extend: {
       /* Poner colores: */
       colors: {
-        rosita: "#FAFA",
-        naranjote: "orange",
-        azulino: "blue",
+        rosa: "#FAFA",
+        naranja: "orange",
+        azul: "blue",
         texto: "gray",
       },
 

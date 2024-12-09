@@ -4,7 +4,7 @@
 
 <head>
     <!-- Page title-->
-    <title>Orangutan Fundation Form</title>
+    <title>Orangutan Fundation Donate</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,44 +19,44 @@
 </head>
 
 <body class="bg-gray-100">
- <!-- Header -->
-<nav class="sticky top-0 left-0 right-0 z-50 bg-white shadow-md">
-    <div class="w-full px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-            <!-- Logo -->
-            <div class="flex-shrink-0">
-                <a href="#">
-                    <img src="../../assets/images/logo.svg" alt="Logo" class="h-10">
-                </a>
+    <!-- Header -->
+    <header class="sticky top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <nav class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#">
+                        <img src="../../assets/images/logo.svg" alt="Logo" class="h-10">
+                    </a>
+                </div>
+
+                <!-- Right Buttons -->
+                <div class="hidden md:flex items-center space-x-0">
+                    <a href="../index.html" class="text-sm text-gray-700 hover:text-gray-900 mr-5"> HOME </a>
+                    <a href="./form.html" class="text-sm text-gray-700 hover:text-gray-900 mr-10"> SING UP </a>
+                    <a href="./donate.html" class="px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-l-full hover:bg-green-700"> DONATE </a>
+                    <a href="./adopt.html" class="px-6 py-2 bg-green-900 text-white text-sm font-semibold rounded-r-full hover:bg-green-950"> ADOPT </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-button" class="text-gray-700 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
-            <!-- Right Buttons -->
-            <div class="hidden md:flex items-center space-x-0">
-                <a href="../index.html" class="text-sm text-gray-700 hover:text-gray-900 mr-5"> HOME </a>
-                <a href="./form.html" class="text-sm text-gray-700 hover:text-gray-900 mr-10"> SING UP </a>
-                <a href="./donate.html" class="px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-l-full hover:bg-green-700"> DONATE </a>
-                <a href="./adopt.html" class="px-6 py-2 bg-green-900 text-white text-sm font-semibold rounded-r-full hover:bg-green-950"> ADOPT </a>
+            <!-- Mobile Menu Links -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <a href="../index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Home</a>
+                <a href="./donate.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Donate</a>
+                <a href="./adopt.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Adopt</a>
+                <a href="./form.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Sing Up</a>
             </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden flex items-center">
-                <button id="menu-button" class="text-gray-700 hover:text-gray-900 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Links -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="../index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Home</a>
-            <a href="./donate.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Donate</a>
-            <a href="./adopt.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Adopt</a>
-            <a href="./form.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Sing Up</a>
-        </div>
-    </div>
-</nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <div class="relative w-full h-[300px] bg-cover bg-center fondo-donate-adopt">
@@ -64,14 +64,16 @@
 
     <!-- Main Container -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Title and text -->
         <h1 class="text-3xl font-bold mb-4">SUPPORT ORANGUTAN JUNGLE SCHOOL STUDENTS</h1>
         <p class="text-lg mb-8">Donations are the backbone of our operations. Support every progression of their rehabilitation stages, here!</p>
 
+        <!-- Donate link -->
         <div class="mb-8">
-            <a href="./donate.html" class="inline-block px-8 py-3 bg-red-700 text-white font-bold rounded-full hover:bg-red-800"> GIVE NOW <span class="ml-2">➔</span>
+            <a href="./donate.html" class="inline-block px-8 py-3 bg-red-700 text-white font-bold rounded-full hover:bg-red-800"> GIVE NOW <span class="ml-2">-></span>
             </a>
         </div>
-
+        <!-- Subtitle -->
         <h2 class="text-2xl font-bold mb-6">Or choose one of our donation packs:</h2>
 
         <!-- Donation Cards Grid -->
@@ -120,7 +122,7 @@
                 </a>
             </div>
 
-            <!-- FAQ Section -->
+            <!-- FREQUENTLY ASKED QUESTIONS Section -->
             <div class="md:col-span-2 p-8 bg-green-600 text-black rounded-lg">
                 <h2 class="text-2xl font-bold mb-4">FREQUENTLY ASKED QUESTIONS</h2>
                 <p class="mb-4">Got a question about donations? Check out our frequently asked questions.</p>
@@ -262,6 +264,7 @@
         </div>
     </footer>
 
+    <!-- JS link -->
     <script src="../js/script.js"></script>
 </body>
 

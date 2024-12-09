@@ -19,60 +19,63 @@
 </head>
 
 <body class="bg-gray-100">
- <!-- Header -->
-<nav class="sticky top-0 left-0 right-0 z-50 bg-white shadow-md">
-    <div class="w-full px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-            <!-- Logo -->
-            <div class="flex-shrink-0">
-                <a href="#">
-                    <img src="../../assets/images/logo.svg" alt="Logo" class="h-10">
-                </a>
+
+    <!-- Header -->
+    <header class="sticky top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <nav class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#">
+                        <img src="../../assets/images/logo.svg" alt="Logo" class="h-10">
+                    </a>
+                </div>
+
+                <!-- Right Buttons -->
+                <div class="hidden md:flex items-center space-x-0">
+                    <a href="../index.html" class="text-sm text-gray-700 hover:text-gray-900 mr-5"> HOME </a>
+                    <a href="./donate.html" class="px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-l-full hover:bg-green-700"> DONATE </a>
+                    <a href="./adopt.html" class="px-6 py-2 bg-green-900 text-white text-sm font-semibold rounded-r-full hover:bg-green-950"> ADOPT </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-button" class="text-gray-700 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
-            <!-- Right Buttons -->
-            <div class="hidden md:flex items-center space-x-0">
-                <a href="../index.html" class="text-sm text-gray-700 hover:text-gray-900 mr-5"> HOME </a>
-                <a href="./donate.html" class="px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-l-full hover:bg-green-700"> DONATE </a>
-                <a href="./adopt.html" class="px-6 py-2 bg-green-900 text-white text-sm font-semibold rounded-r-full hover:bg-green-950"> ADOPT </a>
+            <!-- Mobile Menu Links -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <a href="../index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Home</a>
+                <a href="./donate.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Donate</a>
+                <a href="./adopt.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Adopt</a>
+                <a href="./form.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Sing Up</a>
             </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden flex items-center">
-                <button id="menu-button" class="text-gray-700 hover:text-gray-900 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Links -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="../index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Home</a>
-            <a href="./donate.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Donate</a>
-            <a href="./adopt.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Adopt</a>
-            <a href="./form.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Sing Up</a>
-        </div>
-    </div>
-</nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <div class="relative w-full h-[300px] bg-cover bg-center fondo-form">
     </div>
 
-    <!-- main container-->
      <!-- Main Container -->
      <div class="max-w-full px-4 sm:px-6 lg:px-16 py-16 mt-10 md:ml-10 xl:ml-32 xl:mr-[400px] 2xl:mr-[600px]">
+        <!-- Title and text -->
         <h1 class="text-3xl font-bold mb-4">GET THE LATEST NEWS</h1>
         <p class="font-bold mb-6">Stay up-to-date through your inbox. Sign up to receive stories and updates from us.</p>
         <p class="mb-8">In order to subscribe, we'll need a few details from you:</p>
 
+        <!-- Login title -->
         <h2 class="font-bold mb-2 mt-16">ENTER YOUR DATA</h2>
         <p class="mb-6">All required fields are marked with an (*).</p>
 
         <!-- Form -->
         <form id="form" class="space-y-6" novalidate>
+            <!-- Input Line 1-->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Email Field -->
                 <div>
@@ -91,7 +94,7 @@
                     </select>
                 </div>
             </div>
-        
+            <!-- Input Line 2 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- First Name Field -->
                 <div>
@@ -105,7 +108,7 @@
                     <input type="text" id="family-name" placeholder="FAMILY NAME" class="form__field w-full px-4 py-2 border border-gray-300 rounded-full bg-gray-200" pattern="[A-Za-z\s]{2,}" required>
                 </div>
             </div>
-        
+            <!-- Input Line 3 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- DNI Field -->
                 <div>
@@ -149,7 +152,7 @@
             <!-- Sign Up Button and Privacy Notice -->
             <div>
                 <button type="submit" class="bg-red-700 mt-8 text-white font-bold py-3 px-8 rounded-full hover:bg-red-800 flex items-center">
-                    SIGN ME UP NOW <span class="ml-2">➔</span>
+                    SIGN ME UP NOW <span class="ml-2">-></span>
                 </button>
                 <p class="mt-4 text-gray-600 text-sm">
                     We'll keep your personal details safe. For details on how we collect, use, and store your personal information, see our 
@@ -160,7 +163,7 @@
             <!-- Error Message -->
             <span class="text__error text-red-600 mt-4 block" id="error-message"></span>
         </form>
-                
+          
     </div>
 
     <!-- Footer Section -->
@@ -234,6 +237,7 @@
         </div>
     </footer>
 
+    <!-- JS link -->
     <script src="../js/script.js"></script>
 </body>
 
