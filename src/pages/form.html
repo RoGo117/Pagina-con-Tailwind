@@ -72,45 +72,59 @@
         <p class="mb-6">All required fields are marked with an (*).</p>
 
         <!-- Form -->
-        <form class="space-y-6">
+        <form id="form" class="space-y-6" novalidate>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Email Field -->
                 <div>
                     <label class="block font-bold mb-2" for="email">EMAIL*</label>
-                    <input type="email" id="email" placeholder="EMAIL" class="w-full px-4 py-2 border border-gray-300 rounded-full bg-gray-200">
+                    <input type="email" id="email" placeholder="EMAIL" class="form__field w-full px-4 py-2 border border-gray-300 rounded-full bg-gray-200" required>
                 </div>
-
+        
                 <!-- Title Field -->
                 <div>
-                    <label class="block font-bold mb-2" for="title">TITLE*</label> 
-                    <select id="title" class="w-full px-4 py-2 border border-gray-300 rounded-full appearance-none bg-gray-200">
-                        <option>Select here</option>
+                    <label class="block font-bold mb-2" for="title">TITLE*</label>
+                    <select id="title" class="form__field w-full px-4 py-2 border border-gray-300 rounded-full appearance-none bg-gray-200" required>
+                        <option value="">Select here</option>
                         <option>Pongo pygmaeus pygmaeus</option>
                         <option>Pongo pygmaeus morio</option>
                         <option>Pongo pygmaeus wurmbii</option>
                     </select>
                 </div>
             </div>
-
+        
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- First Name Field -->
                 <div>
                     <label class="block font-bold mb-2" for="first-name">FIRST NAME*</label>
-                    <input type="text" id="first-name" placeholder="FIRST NAME" class="w-full px-4 py-2 border border-gray-300 rounded-full bg-gray-200">
+                    <input type="text" id="first-name" placeholder="FIRST NAME" class="form__field w-full px-4 py-2 border border-gray-300 rounded-full bg-gray-200" pattern="[A-Za-z\s]{2,}" required>
                 </div>
-
+        
                 <!-- Family Name Field -->
                 <div>
                     <label class="block font-bold mb-2" for="family-name">FAMILY NAME*</label>
-                    <input type="text" id="family-name" placeholder="FAMILY NAME" class="w-full px-4 py-2 border border-gray-300 rounded-full bg-gray-200">
+                    <input type="text" id="family-name" placeholder="FAMILY NAME" class="form__field w-full px-4 py-2 border border-gray-300 rounded-full bg-gray-200" pattern="[A-Za-z\s]{2,}" required>
                 </div>
             </div>
-
+        
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- DNI Field -->
+                <div>
+                    <label class="block font-bold mb-2" for="dni">DNI*</label>
+                    <input type="text" id="dni" placeholder="DNI" class="form__field w-full px-4 py-2 border border-gray-300 rounded-full bg-gray-200" pattern="[0-9]{8}[A-Za-z]{1}" required>
+                </div>
+        
+                <!-- Age Field -->
+                <div>
+                    <label class="block font-bold mb-2" for="age">AGE*</label>
+                    <input type="number" id="age" placeholder="AGE" class="form__field w-full px-4 py-2 border border-gray-300 rounded-full bg-gray-200" min="18" max="99" required>
+                </div>
+            </div>
+        
             <!-- Country of Residence Field -->
             <div>
                 <label class="block font-bold mb-2" for="country">COUNTRY OF RESIDENCE*</label>
-                <select id="country" class="w-full px-4 py-2 border border-gray-300 rounded-full appearance-none bg-gray-200">
-                    <option>Select here</option>
+                <select id="country" class="form__field w-full px-4 py-2 border border-gray-300 rounded-full appearance-none bg-gray-200" required>
+                    <option value="">Select here</option>
                     <option>Albania</option>
                     <option>Azerbaijan</option>
                     <option>Brazil</option>
@@ -119,32 +133,34 @@
                     <option>El Salvador</option>
                     <option>Gabon</option>
                     <option>Italy</option>
-                    <option>Albania</option>
                     <option>Montenegro</option>
                     <option>Nepal</option>
                     <option>Portugal</option>
                     <option>Spain</option>
                 </select>
             </div>
-
+        
             <!-- Cookies -->
             <div class="flex items-center">
-                <input type="checkbox" id="agree" class="h-5 w-5 mr-2">
-                <label for="agree" class="text-sm">I have read and agree to the <a href="#" class="border-t-gray-100 border-r-gray-100 border-l-gray-100 border-b-green-600 border-2">Cookies & Privacy Policy</a>.</label>
+                <input type="checkbox" id="agree" class="h-5 w-5 mr-2" required>
+                <label for="agree" class="text-sm">I have read and agree to the <a href="#" class="text-green-600 underline">Cookies & Privacy Policy</a>.</label>
             </div>
-
+        
             <!-- Sign Up Button and Privacy Notice -->
             <div>
-                <button type="submit" class="bg-red-700 mt-20 text-white font-bold py-3 px-8 rounded-full hover:bg-red-800 flex items-center">
+                <button type="submit" class="bg-red-700 mt-8 text-white font-bold py-3 px-8 rounded-full hover:bg-red-800 flex items-center">
                     SIGN ME UP NOW <span class="ml-2">➔</span>
                 </button>
                 <p class="mt-4 text-gray-600 text-sm">
                     We'll keep your personal details safe. For details on how we collect, use, and store your personal information, see our 
-                    <a href="#" class="border-t-gray-100 border-r-gray-100 border-l-gray-100 border-b-green-600 border-2">Cookies & Privacy Policy</a>
+                    <a href="#" class="text-green-600 underline">Cookies & Privacy Policy</a>
                 </p>
             </div>
-        </form>
         
+            <!-- Error Message -->
+            <span class="text__error text-red-600 mt-4 block" id="error-message"></span>
+        </form>
+                
     </div>
 
     <!-- Footer Section -->
