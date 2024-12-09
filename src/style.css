@@ -1,0 +1,13 @@
+/*
+    Estilos concretos sin TailwindCSS
+    -Rodrigo Moreno Bielsa
+
+*/
+
+.fondo-index {
+    background-image: url("../assets/images/fondo1.jpg");
+}
+
+.fondo-form {
+    background-image: url("../assets/images/fondo2.jpg");
+}

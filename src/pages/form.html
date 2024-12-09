@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- Page title-->
+    <title>Orangutan Fundation Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page icon-->
+    <link rel="shortcut icon" href="../../assets/images/logo.svg" type="image/x-icon">
+    
+    <!-- Links to CSS (page layout)-->
+    <!-- Generic TailwindCSS script link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Extra CSS Link-->
+    <link rel="stylesheet" href="./../style.css">
+</head>
+
+<body class="bg-gray-100">
+ <!-- Header -->
+<nav class="sticky top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <div class="w-full px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="#">
+                    <img src="../../assets/images/logo.svg" alt="Logo" class="h-10">
+                </a>
+            </div>
+
+            <!-- Right Buttons -->
+            <div class="hidden md:flex items-center space-x-0">
+                <a href="../index.html" class="text-sm text-gray-700 hover:text-gray-900 mr-5"> HOME </a>
+                <a href="./donate.html" class="px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-l-full hover:bg-green-700"> DONATE </a>
+                <a href="./adopt.html" class="px-6 py-2 bg-green-900 text-white text-sm font-semibold rounded-r-full hover:bg-green-950"> ADOPT </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="menu-button" class="text-gray-700 hover:text-gray-900 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Links -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="../index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Home</a>
+            <a href="./donate.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Donate</a>
+            <a href="./adopt.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Adopt</a>
+            <a href="./form.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Sing Up</a>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <div class="relative w-full h-[300px] bg-cover bg-center fondo-form">
+    </div>
+
+    <!-- main container-->
+     <!-- Main Container -->
+     <div class="max-w-full px-4 sm:px-6 lg:px-16 py-16 mt-10 md:ml-10 xl:ml-32 xl:mr-[400px] 2xl:mr-[600px]">
+        <h1 class="text-3xl font-bold mb-4">GET THE LATEST NEWS</h1>
+        <p class="font-bold mb-6">Stay up-to-date through your inbox. Sign up to receive stories and updates from us.</p>
+        <p class="mb-8">In order to subscribe, we'll need a few details from you:</p>
+
+        <h2 class="font-bold mb-2 mt-16">ENTER YOUR DATA</h2>
+        <p class="mb-6">All required fields are marked with an (*).</p>
+
+        <!-- Form -->
+        <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Email Field -->
+                <div>
+                    <label class="block font-bold mb-2" for="email">EMAIL*</label>
+                    <input type="email" id="email" placeholder="EMAIL" class="w-full px-4 py-2 border border-gray-300 rounded-full bg-gray-200">
+                </div>
+
+                <!-- Title Field -->
+                <div>
+                    <label class="block font-bold mb-2" for="title">TITLE*</label> 
+                    <select id="title" class="w-full px-4 py-2 border border-gray-300 rounded-full appearance-none bg-gray-200">
+                        <option>Select here</option>
+                        <option>Pongo pygmaeus pygmaeus</option>
+                        <option>Pongo pygmaeus morio</option>
+                        <option>Pongo pygmaeus wurmbii</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- First Name Field -->
+                <div>
+                    <label class="block font-bold mb-2" for="first-name">FIRST NAME*</label>
+                    <input type="text" id="first-name" placeholder="FIRST NAME" class="w-full px-4 py-2 border border-gray-300 rounded-full bg-gray-200">
+                </div>
+
+                <!-- Family Name Field -->
+                <div>
+                    <label class="block font-bold mb-2" for="family-name">FAMILY NAME*</label>
+                    <input type="text" id="family-name" placeholder="FAMILY NAME" class="w-full px-4 py-2 border border-gray-300 rounded-full bg-gray-200">
+                </div>
+            </div>
+
+            <!-- Country of Residence Field -->
+            <div>
+                <label class="block font-bold mb-2" for="country">COUNTRY OF RESIDENCE*</label>
+                <select id="country" class="w-full px-4 py-2 border border-gray-300 rounded-full appearance-none bg-gray-200">
+                    <option>Select here</option>
+                    <option>Albania</option>
+                    <option>Azerbaijan</option>
+                    <option>Brazil</option>
+                    <option>Chad</option>
+                    <option>Cuba</option>
+                    <option>El Salvador</option>
+                    <option>Gabon</option>
+                    <option>Italy</option>
+                    <option>Albania</option>
+                    <option>Montenegro</option>
+                    <option>Nepal</option>
+                    <option>Portugal</option>
+                    <option>Spain</option>
+                </select>
+            </div>
+
+            <!-- Cookies -->
+            <div class="flex items-center">
+                <input type="checkbox" id="agree" class="h-5 w-5 mr-2">
+                <label for="agree" class="text-sm">I have read and agree to the <a href="#" class="border-t-gray-100 border-r-gray-100 border-l-gray-100 border-b-green-600 border-2">Cookies & Privacy Policy</a>.</label>
+            </div>
+
+            <!-- Sign Up Button and Privacy Notice -->
+            <div>
+                <button type="submit" class="bg-red-700 mt-20 text-white font-bold py-3 px-8 rounded-full hover:bg-red-800 flex items-center">
+                    SIGN ME UP NOW <span class="ml-2">➔</span>
+                </button>
+                <p class="mt-4 text-gray-600 text-sm">
+                    We'll keep your personal details safe. For details on how we collect, use, and store your personal information, see our 
+                    <a href="#" class="border-t-gray-100 border-r-gray-100 border-l-gray-100 border-b-green-600 border-2">Cookies & Privacy Policy</a>
+                </p>
+            </div>
+        </form>
+        
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-200 w-full mt-20 max-w-full">
+        <div class="w-full px-4 sm:px-6 lg:px-8 py-12 mb-0">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-gray-800 text-lg">
+
+                <!-- First Card: Contact Info -->
+                <div class="text-left mt-4">
+                    <h3 class="text-xl font-bold mb-4">BORNEO ORANGUTAN SURVIVAL (BOS) FOUNDATION</h3>
+                    <div class="mb-4 space-y-1">
+                        <p class="block">Jalan Kumbang No. 31</p>
+                        <p class="block">Bogor 16128</p>
+                        <p class="block">West Java, Indonesia</p>
+                    </div>
+                    <p class="font-bold">PHONE</p>
+                    <p class="mb-4">695 183 257</p>
+                    <p class="font-bold">EMAIL</p>
+                    <p><a href="mailto:hello@orangutan.or.id" class="text-gray-700 hover:underline">hello@orangutan.or.id</a></p>
+                </div>
+
+                <!-- Second Card: Newsletter Signup -->
+                <div class="text-left mt-4">
+                    <h3 class="text-xl font-bold mb-4">GET OUR LATEST NEWS</h3>
+                    <p class="mb-4">Get exclusive updates on our work and how you can help.</p>
+                    <form class="flex flex-col items-center md:items-start">
+                        <input type="email" placeholder="Enter Here" class="w-full p-3 mb-4 border border-gray-400 rounded-full focus:outline-none">
+                        <button type="submit" class="px-8 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800"> SIGN UP </button>
+                    </form>
+                </div>
+
+                <!-- Third Card: Social Media Links -->
+                <div class="text-left mt-4">
+                    <h3 class="text-xl font-bold mb-4">GET SOCIAL</h3>
+                    <p class="mb-4">Have you joined our social media family yet? Follow us and get the very latest news!</p>
+                    <div class="flex justify-center md:justify-start">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center">
+                            <img src="../../assets/images/icono-ig.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center">
+                            <img src="../../assets/images/icono-fb.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center">
+                            <img src="../../assets/images/icono-tw.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center">
+                            <img src="../../assets/images/icono-yt.png" alt="Youtube">
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center">
+                            <img src="../../assets/images/icono-tt.png" alt="Tiktok">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="border-t border-gray-300 pt-4 text-center text-sm">
+                <div class="flex flex-wrap justify-center space-x-4 mb-4">
+                    <a href="#" class="text-gray-600 underline hover:text-gray-900">Cookies & Privacy Policy</a>
+                    <a href="#" class="text-gray-600 underline hover:text-gray-900">Using Our Content</a>
+                    <a href="#" class="text-gray-600 underline hover:text-gray-900">Newsroom</a>
+                    <a href="#" class="text-gray-600 underline hover:text-gray-900">Glossary</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="bg-green-600 text-white text-center py-4">
+            Copyright (c) 2024 BOSF - Borneo Orangutan Survival Foundation. All rights reserved. Site by 
+            <span class="font-bold">WEBARQ</span>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

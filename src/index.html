@@ -1,117 +1,241 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
-  <head>
-    <meta charset="utf-8">
+<head>
+    <!-- Page title-->
+    <title>Orangutan Fundation Index</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TailwindCSS - Primero </title>
-    <!-- tailwindcss -->
-    <link rel="stylesheet" href="output.css">
-  </head>
 
-  <!-- npm run dev -->
+    <!-- Page icon-->
+    <link rel="shortcut icon" href="../assets/images/logo.svg" type="image/x-icon">
+    
+    <!-- Links to CSS (page layout)-->
+    <!-- Generic TailwindCSS script link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Extra CSS Link-->
+    <link rel="stylesheet" href="./style.css">
+</head>
 
-
-  <body class="bg-gray-100">
+<body class="bg-gray-100">
     <!-- Header -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="sticky top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="#">
-                        <img src="../assets/images/logo.svg" alt="Logo" class="h-12">
+                        <img src="../assets/images/logo.svg" alt="Logo" class="h-10">
                     </a>
                 </div>
-                <!-- Menu -->
+
+                <!-- Right Buttons -->
                 <div class="hidden md:flex items-center space-x-0">
-                    <a href="#" class="text-sm text-gray-700 hover:text-gray-900 mr-5">EN</a>
-                    <a href="#" class="px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-l-full hover:bg-green-700">
-                    DONATE
-                    </a>
-                    <a href="#" class="px-6 py-2 bg-green-900 text-white text-sm font-semibold rounded-r-full hover:bg-green-950">
-                    ADOPT
-                    </a>
+                    <a href="./pages/form.html" class="text-sm text-gray-700 hover:text-gray-900 mr-5"> SING UP </a>
+                    <a href="./pages/donate.html" class="px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-l-full hover:bg-green-700"> DONATE </a>
+                    <a href="./pages/adopt.html" class="px-6 py-2 bg-green-900 text-white text-sm font-semibold rounded-r-full hover:bg-green-950"> ADOPT </a>
                 </div>
+
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                  <button class="text-gray-700 hover:text-gray-900 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                  </button>
+                    <button id="menu-button" class="text-gray-700 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
+            </div>
+
+            <!-- Mobile Menu Links -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <a href="./index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Home</a>
+                <a href="./pages/donate.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Donate</a>
+                <a href="./pages/adopt.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Adopt</a>
+                <a href="./pages/form.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Sing Up</a>
             </div>
         </div>
     </nav>
 
-        <!-- Main Content -->
-        <div class="mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <!-- Banner Section -->
-          <div class="bg-cover bg-center h-64 flex items-center justify-center"
-              style="background-image: url('../assets/images/fondo1.jpg');">
-              <div class="text-center text-white">
-                  <h1 class="text-3xl font-bold">SEND AN ECARD</h1>
-                  <p class="text-sm mt-2">Delivered via email, instantly!</p>
-                  <a href="#"
-                      class="mt-4 inline-block px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700">
-                      SUPPORT NOW
-                  </a>
-              </div>
-          </div>
-  
-          <!-- How It Works Section -->
-          <div class="py-16">
-              <h2 class="text-2xl font-bold text-center mb-10">HOW IT WORKS</h2>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <!-- Card 1 -->
-                  <div class="flex flex-col items-center text-center">
-                      <div
-                          class="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 text-gray-800 text-3xl mb-4">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="currentColor" class="w-8 h-8">
-                              <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M9.75 9.75L4.5 14.25m0 0L9.75 18.75M4.5 14.25H21" />
-                          </svg>
-                      </div>
-                      <h3 class="text-lg font-semibold mb-2">CHOOSE YOUR DESIGN</h3>
-                      <p class="text-gray-600 text-sm">Pick an eCard design from the categories below.</p>
-                  </div>
-                  <!-- Card 2 -->
-                  <div class="flex flex-col items-center text-center">
-                      <div
-                          class="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 text-gray-800 text-3xl mb-4">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="currentColor" class="w-8 h-8">
-                              <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M12 3v18m9-9H3" />
-                          </svg>
-                      </div>
-                      <h3 class="text-lg font-semibold mb-2">ENTER THE DETAILS</h3>
-                      <p class="text-gray-600 text-sm">Choose your options and enter all details.</p>
-                  </div>
-                  <!-- Card 3 -->
-                  <div class="flex flex-col items-center text-center">
-                      <div
-                          class="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 text-gray-800 text-3xl mb-4">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                              stroke="currentColor" class="w-8 h-8">
-                              <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M5.25 12.75L9 16.5l9-9" />
-                          </svg>
-                      </div>
-                      <h3 class="text-lg font-semibold mb-2">CHECKOUT, AND IT'S SENT!</h3>
-                      <p class="text-gray-600 text-sm">Your eCard will be sent immediately or on a scheduled date of your choice.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
+    <!-- Hero Section -->
+    <div class="relative w-full h-[400px] bg-cover bg-center fondo-index">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative z-10 h-full flex flex-col justify-center pl-8 sm:pl-12 lg:pl-16 xl:ml-20">
+            <a href="#" class="mb-4 inline-block px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded hover:bg-green-700 w-40"> SUPPORT NOW </a>
+            <h1 class="text-4xl font-bold text-white mb-2">SEND AN ECARD</h1>
+            <p class="text-white text-lg">Delivered via email, instantly!</p>
+        </div>
+    </div>
 
+    <!-- main container-->
+    <div class="container mx-auto">
+        <!-- How It Works Section -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-2xl font-bold text-left mb-10">HOW IT WORKS</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <!-- Card 1 -->
+            <div class="flex flex-col items-center">
+                <img src="../assets/images/icono-design.png" alt="Choose Design Icon" class="mb-4">
+                <span class="bg-green-600 text-white font-bold px-4 py-1 mb-2 text-sm uppercase">CHOOSE YOUR DESIGN</span>
+                <p class="text-gray-600">Pick an eCard design from the categories below.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex flex-col items-center">
+                <img src="../assets/images/icono-details.png" alt="Enter Details Icon" class="mb-4">
+                <span class="bg-green-600 text-white font-bold px-4 py-1 mb-2 text-sm uppercase">ENTER THE DETAILS</span>
+                <p class="text-gray-600">Choose your options and enter all details.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex flex-col items-center">
+                <img src="../assets/images/icono-checkout.png" alt="Checkout Icon" class="mb-4">
+                <span class="bg-green-600 text-white font-bold px-4 py-1 mb-2 text-sm uppercase">CHECKOUT, AND IT'S SENT!</span>
+                <p class="text-gray-600">Your eCard will be sent immediately or on a scheduled date of your choice.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-2xl font-bold text-left mb-10">CHOOSE A DESIGN</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="flex flex-col text-left items-start">
+                <img src="../assets/images/desing-orangutan1.jpg" alt="Forest Schooler" class="w-full mb-4">
+                <span class="bg-green-600 text-white font-bold px-4 py-2 mb-2 text-sm uppercase">FOREST SCHOOLER</span>
+                <p class="text-gray-700 mb-4">Your eCard will be sent immediately or on a scheduled date of your choice.</p>
+                <a href="#" class="inline-flex items-center px-6 py-2 bg-red-800 text-white font-semibold rounded-full hover:bg-red-700"> SEND NOW 
+                    <span class="ml-2"> -> </span>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex flex-col text-left items-start">
+                <img src="../assets/images/desing-orangutan2.jpg" alt="Unreleasable Orangutan" class="w-full mb-4">
+                <span class="bg-green-600 text-white font-bold px-4 py-2 mb-2 text-sm uppercase">UNRELEASABLE ORANGUTAN</span>
+                <p class="text-gray-700 mb-4">Your eCard will be sent immediately or on a scheduled date of your choice.</p>
+                <a href="#" class="inline-flex items-center px-6 py-2 bg-red-800 text-white font-semibold rounded-full hover:bg-red-700"> SEND NOW 
+                    <span class="ml-2"> -> </span>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex flex-col text-left items-start">
+                <img src="../assets/images/desing-orangutan3.jpg" alt="Island Dweller" class="w-full mb-4">
+                <span class="bg-green-600 text-white font-bold px-4 py-2 mb-2 text-sm uppercase">ISLAND DWELLER</span>
+                <p class="text-gray-700 mb-4">Your eCard will be sent immediately or on a scheduled date of your choice.</p>
+                <a href="#" class="inline-flex items-center px-6 py-2 bg-red-800 text-white font-semibold rounded-full hover:bg-red-700"> SEND NOW 
+                    <span class="ml-2"> -> </span>
+                </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flex flex-col text-left items-start">
+                <img src="../assets/images/desing-orangutan4.jpg" alt="Island Dweller" class="w-full mb-4">
+                <span class="bg-green-600 text-white font-bold px-4 py-2 mb-2 text-sm uppercase">ORANGUTAN BABY</span>
+                <p class="text-gray-700 mb-4">Your eCard will be sent immediately or on a scheduled date of your choice.</p>
+                <a href="#" class="inline-flex items-center px-6 py-2 bg-red-800 text-white font-semibold rounded-full hover:bg-red-700"> SEND NOW 
+                    <span class="ml-2"> -> </span>
+                </a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="flex flex-col text-left items-start">
+                <img src="../assets/images/desing-orangutan5.jpg" alt="Island Dweller" class="w-full mb-4">
+                <span class="bg-green-600 text-white font-bold px-4 py-2 mb-2 text-sm uppercase">WHEELBARROW WITH ORANGUTAN BEBIES</span>
+                <p class="text-gray-700 mb-4">Your eCard will be sent immediately or on a scheduled date of your choice.</p>
+                <a href="#" class="inline-flex items-center px-6 py-2 bg-red-800 text-white font-semibold rounded-full hover:bg-red-700"> SEND NOW 
+                    <span class="ml-2"> -> </span>
+                </a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="flex flex-col text-left items-start">
+                <img src="../assets/images/desing-bear6.jpg" alt="Island Dweller" class="w-full mb-4">
+                <span class="bg-green-600 text-white font-bold px-4 py-2 mb-2 text-sm uppercase">SUN BEAR</span>
+                <p class="text-gray-700 mb-4">Your eCard will be sent immediately or on a scheduled date of your choice.</p>
+                <a href="#" class="inline-flex items-center px-6 py-2 bg-red-800 text-white font-semibold rounded-full hover:bg-red-700"> SEND NOW 
+                    <span class="ml-2"> -> </span>
+                </a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-200 w-full mt-20 max-w-full">
+        <div class="w-full px-4 sm:px-6 lg:px-8 py-12 mb-0">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-gray-800 text-lg">
+
+                <!-- First Card: Contact Info -->
+                <div class="text-left mt-4">
+                    <h3 class="text-xl font-bold mb-4">BORNEO ORANGUTAN SURVIVAL (BOS) FOUNDATION</h3>
+                    <div class="mb-4 space-y-1">
+                        <p class="block">Jalan Kumbang No. 31</p>
+                        <p class="block">Bogor 16128</p>
+                        <p class="block">West Java, Indonesia</p>
+                    </div>
+                    <p class="font-bold">PHONE</p>
+                    <p class="mb-4">695 183 257</p>
+                    <p class="font-bold">EMAIL</p>
+                    <p><a href="mailto:hello@orangutan.or.id" class="text-gray-700 hover:underline">hello@orangutan.or.id</a></p>
+                </div>
+
+                <!-- Second Card: Newsletter Signup -->
+                <div class="text-left mt-4">
+                    <h3 class="text-xl font-bold mb-4">GET OUR LATEST NEWS</h3>
+                    <p class="mb-4">Get exclusive updates on our work and how you can help.</p>
+                    <form class="flex flex-col items-center md:items-start">
+                        <input type="email" placeholder="Enter Here" class="w-full p-3 mb-4 border border-gray-400 rounded-full focus:outline-none">
+                        <button type="submit" class="px-8 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800">
+                            <a href="./pages/form.html">SIGN UP</a>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Third Card: Social Media Links -->
+                <div class="text-left mt-4">
+                    <h3 class="text-xl font-bold mb-4">GET SOCIAL</h3>
+                    <p class="mb-4">Have you joined our social media family yet? Follow us and get the very latest news!</p>
+                    <div class="flex justify-center md:justify-start">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center">
+                            <img src="../assets/images/icono-ig.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center">
+                            <img src="../assets/images/icono-fb.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center">
+                            <img src="../assets/images/icono-tw.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center">
+                            <img src="../assets/images/icono-yt.png" alt="Youtube">
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center">
+                            <img src="../assets/images/icono-tt.png" alt="Tiktok">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="border-t border-gray-300 pt-4 text-center text-sm">
+                <div class="flex flex-wrap justify-center space-x-4 mb-4">
+                    <a href="#" class="text-gray-600 underline hover:text-gray-900">Cookies & Privacy Policy</a>
+                    <a href="#" class="text-gray-600 underline hover:text-gray-900">Using Our Content</a>
+                    <a href="#" class="text-gray-600 underline hover:text-gray-900">Newsroom</a>
+                    <a href="#" class="text-gray-600 underline hover:text-gray-900">Glossary</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="bg-green-600 text-white text-center py-4">
+            Copyright (c) 2024 BOSF - Borneo Orangutan Survival Foundation. All rights reserved. Site by 
+            <span class="font-bold">WEBARQ</span>
+        </div>
+    </footer>
 
     <script src="./js/script.js"></script>
-
-  </body>
+</body>
 
 </html>
